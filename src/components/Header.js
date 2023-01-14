@@ -12,6 +12,10 @@ const Header = () => {
         <li>
           <NavLink to="/register">Register</NavLink>
         </li>
+
+        <li>
+          <NavLink to="/students">Students</NavLink>
+        </li>
       </ul>
     </nav>
   );
