@@ -1,6 +1,8 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import FormikControl from "./FormikControl";
+import { useDispatch } from "react-redux";
+import { addStudent } from "../../store/Student/studentSlice";
 
 const initial = {
   name: "",
@@ -14,12 +16,17 @@ const validate = (values) => {
   return errors;
 };
 
-const onSubmit = (values, onSubmitProps) => {
-  console.log("Rhese are the values: ", values);
-  onSubmitProps.resetForm();
-};
+
 
 const StudentLogin = () => {
+  const dispatch = useDispatch();
+
+  const onSubmit = (values, onSubmitProps) => {
+    dispatch(addStudent(values))
+    onSubmitProps.resetForm();
+  };
+
+
   return (
     <Formik
       initialValues={initial}
@@ -30,13 +37,18 @@ const StudentLogin = () => {
         formik => {
           return (
             <Form>
+              <FormikControl control="input" name="name" label="Full Name" />
+
               <FormikControl
-              control='input'
-              name='name'
-              label='Full Name' />
+                control="input"
+                name="age"
+                type="number"
+                label="Age"
+              />
+
               <button type="submit">Submit</button>
             </Form>
-          )
+          );
         }
       }
     </Formik>

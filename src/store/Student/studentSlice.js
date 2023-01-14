@@ -5,13 +5,13 @@ const initialState = []
 const studentSlice = createSlice({
   name: 'Students',
   initialState,
-  ruducers: {
-    AddStudent: (state, action) => {
+  reducers: {
+    addStudent: (state, action) => {
       state.push(action.payload)
     }
   }
 })
 
-export const { AddStudent } = studentSlice.actions;
+export const { addStudent } = studentSlice.actions;
 const studentReducer = studentSlice.reducer
 export default studentReducer;

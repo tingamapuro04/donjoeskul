@@ -4,7 +4,8 @@ import { Field, ErrorMessage } from 'formik';
 const Input = ({ name, label, ...rest }) => {
   return (
     <div>
-      <Field name={name} label={label} />
+      <label htmlFor={name}>{label}</label>
+      <Field name={name} {...rest} />
       <ErrorMessage name={name} />
     </div>
   )
