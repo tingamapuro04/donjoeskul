@@ -35,6 +35,12 @@ const validate = (values) => {
   if(!values.age) {
     errors.age = 'Required!'
   }
+  if(values.age < 10) {
+    errors.age = 'No user below 10 years'
+  }
+  if(values.subjects < 2) {
+    errors.subjects = 'You must pick at least two subjects to continue'
+  }
   return errors;
 };
 

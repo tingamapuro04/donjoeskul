@@ -26,6 +26,7 @@ const Checkbox = ({ options, name, label, ...rest }) => {
           });
         }}
       </Field>
+      <ErrorMessage name={name} />
     </div>
   );
 }
