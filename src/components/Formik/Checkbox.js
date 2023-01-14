@@ -1,5 +1,7 @@
 import React from 'react';
 import { Field, ErrorMessage } from 'formik';
+import '../style.scss'
+import ErrorComponent from '../ErrorComponent';
 
 const Checkbox = ({ options, name, label, ...rest }) => {
   return (
@@ -17,8 +19,7 @@ const Checkbox = ({ options, name, label, ...rest }) => {
                     {...field}
                     value={option.value}
                     checked={field.value.includes(option.value)}
-                  />
-                  {" "}
+                  />{" "}
                   {option.key}
                 </label>
               </React.Fragment>
@@ -26,7 +27,7 @@ const Checkbox = ({ options, name, label, ...rest }) => {
           });
         }}
       </Field>
-      <ErrorMessage name={name} />
+      <ErrorMessage name={name} component={ErrorComponent} />
     </div>
   );
 }

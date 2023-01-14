@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field, ErrorMessage } from 'formik';
+import ErrorComponent from '../ErrorComponent';
 
 const Radio = ({ options, name, label, ...rest }) => {
   return (
@@ -28,7 +29,7 @@ const Radio = ({ options, name, label, ...rest }) => {
           }
         }
       </Field>
-      <ErrorMessage name={name} />
+      <ErrorMessage name={name} component={ErrorComponent} />
     </div>
   )
 }
