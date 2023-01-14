@@ -1,5 +1,8 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Field, ErrorMessage } from 'formik';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import PropTypes from 'prop-types';
 import '../style.scss';
 import ErrorComponent from '../ErrorComponent';
 
@@ -28,5 +31,11 @@ const Checkbox = ({
     <ErrorMessage name={name} component={ErrorComponent} />
   </div>
 );
+
+Checkbox.propTypes = {
+  options: PropTypes.instanceOf(Array).isRequired,
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+};
 
 export default Checkbox;

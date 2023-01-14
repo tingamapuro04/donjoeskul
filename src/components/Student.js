@@ -1,4 +1,6 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import PropTypes from 'prop-types';
 import './style.scss';
 
 const Student = ({ name, age }) => (
@@ -16,5 +18,10 @@ const Student = ({ name, age }) => (
     </div>
   </li>
 );
+
+Student.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+};
 
 export default Student;

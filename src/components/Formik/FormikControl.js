@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-props-no-spreading */
+// eslint-disable-next-line import/no-extraneous-dependencies
+import PropTypes from 'prop-types';
 import React from 'react';
 import Input from './Input';
 import Radio from './Radio';
@@ -13,6 +16,10 @@ const FormikControl = ({ control, ...rest }) => {
       return <Checkbox {...rest} />;
     default: return null;
   }
+};
+
+FormikControl.propTypes = {
+  control: PropTypes.string.isRequired,
 };
 
 export default FormikControl;

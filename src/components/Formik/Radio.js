@@ -1,12 +1,15 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import PropTypes from 'prop-types'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import PropTypes from 'prop-types';
 import { Field, ErrorMessage } from 'formik';
 import ErrorComponent from '../ErrorComponent';
 
 const Radio = ({
   options, name, label, ...rest
 }) => (
-  <div>
+  <div className="form-control">
     <label htmlFor={name}>Select Your Gender</label>
     <Field name={name} {...rest}>
       {
@@ -30,5 +33,11 @@ const Radio = ({
     <ErrorMessage name={name} component={ErrorComponent} />
   </div>
 );
+
+Radio.propTypes = {
+  options: PropTypes.instanceOf(Array).isRequired,
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+};
 
 export default Radio;
