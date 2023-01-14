@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './style.scss';
 
 const Student = ({name, age, ...rest}) => {
   return (
     <li>
-      <div>
+      <div className='student'>
         <p>Full Name: {name}</p>
         <p> Age: {age} </p>
       </div>

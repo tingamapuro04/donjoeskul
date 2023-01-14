@@ -3,7 +3,7 @@ import { Formik, Form } from "formik";
 import FormikControl from "./FormikControl";
 import { useDispatch } from "react-redux";
 import { addStudent } from "../../store/Student/studentSlice";
-import './style.scss'
+import '../style.scss'
 
 const initial = {
   name: "",
@@ -29,6 +29,12 @@ const subjects = [
 
 const validate = (values) => {
   let errors = {};
+  if (!values.name ) {
+    errors.name = 'Required!'
+  }
+  if(!values.age) {
+    errors.age = 'Required!'
+  }
   return errors;
 };
 
@@ -48,12 +54,12 @@ const StudentLogin = () => {
       initialValues={initial}
       validate={validate}
       onSubmit={onSubmit}
-      className='form'
+      
     >
       {
         formik => {
           return (
-            <Form>
+            <Form className="form">
               <FormikControl control="input" name="name" label="Full Name" />
 
               <FormikControl
