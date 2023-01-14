@@ -68,6 +68,13 @@ const StudentLogin = () => {
                 options={genderOptions}
               />
 
+              <FormikControl
+                control="checkbox"
+                name="subjects"
+                label="Please select 3"
+                options={genderOptions}
+              />
+
               <button type="submit">Submit</button>
             </Form>
           );
