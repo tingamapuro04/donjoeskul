@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import FormikControl from "./FormikControl";
 import { useDispatch } from "react-redux";
 import { addStudent } from "../../store/Student/studentSlice";
+import './style.scss'
 
 const initial = {
   name: "",
@@ -47,6 +48,7 @@ const StudentLogin = () => {
       initialValues={initial}
       validate={validate}
       onSubmit={onSubmit}
+      className='form'
     >
       {
         formik => {

@@ -8,6 +8,7 @@ const Header = () => {
       fontWeight: isActive ? "700" : "400",
       color: isActive ? "#909090" : "#369cff",
       fontSize: isActive ? "1.6rem" : "1rem",
+      textDecoration: isActive ? "underline" : "none"
     };
   };
 

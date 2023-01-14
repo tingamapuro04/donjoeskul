@@ -5,6 +5,7 @@ import StudentLogin from './Formik/StudentLogin';
 const AdmitStudent = () => {
   return (
     <div>
+      <h2>Please fill in the form below</h2>
       <StudentLogin />
     </div>
   )

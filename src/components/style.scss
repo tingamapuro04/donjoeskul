@@ -8,12 +8,14 @@ body {
   width: 100%;
   margin: 1% auto;
   background: #fff;
-  border-radius: 10%;
+  border-radius: 16px;
 
   ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 16px;
+    padding-left: 2%;
 
     li {
       list-style-type: none;
