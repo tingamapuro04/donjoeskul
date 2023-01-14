@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik, Form } from "formik";
+import FormikControl from "./FormikControl";
 
 const initial = {
   name: "",
@@ -29,6 +30,10 @@ const StudentLogin = () => {
         formik => {
           return (
             <Form>
+              <FormikControl
+              control='input'
+              name='name'
+              label='Full Name' />
               <button type="submit">Submit</button>
             </Form>
           )
