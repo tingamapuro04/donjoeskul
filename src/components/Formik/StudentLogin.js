@@ -72,7 +72,7 @@ const StudentLogin = () => {
                 control="checkbox"
                 name="subjects"
                 label="Please select 3"
-                options={genderOptions}
+                options={subjects}
               />
 
               <button type="submit">Submit</button>
