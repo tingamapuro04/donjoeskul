@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Input from './Input';
 import Radio from './Radio';
 import Checkbox from './Checkbox';
@@ -6,13 +6,13 @@ import Checkbox from './Checkbox';
 const FormikControl = ({ control, ...rest }) => {
   switch (control) {
     case 'input':
-      return <Input {...rest} />
+      return <Input {...rest} />;
     case 'radio':
-      return <Radio {...rest} />
+      return <Radio {...rest} />;
     case 'checkbox':
-      return <Checkbox {...rest} />
+      return <Checkbox {...rest} />;
     default: return null;
   }
-}
+};
 
-export default FormikControl
+export default FormikControl;

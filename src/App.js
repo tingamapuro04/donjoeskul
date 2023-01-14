@@ -1,12 +1,12 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import './App.scss';
 import AdmitStudent from './components/AdmitStudent';
 import Home from './components/Home';
 import Header from './components/Header';
 import NoPath from './components/NoPath';
 import Students from './components/Students';
-import './components/style.scss'
+import './components/style.scss';
 
 function App() {
   return (
