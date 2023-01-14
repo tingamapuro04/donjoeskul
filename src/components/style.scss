@@ -1,0 +1,53 @@
+body {
+  width: 100vw;
+  background: #8886b6a3;
+}
+
+.items {
+  padding: 1%;
+
+  li {
+    list-style: none;
+  }
+}
+
+.Navlink {
+  width: 100%;
+  margin: 1% auto;
+  background: #fff;
+  border-radius: 16px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 16px;
+    padding-left: 2%;
+
+    li {
+      list-style-type: none;
+      margin-right: 4%;
+      padding: 1%;
+    }
+  }
+}
+
+.form {
+  background-color: #fff;
+  width: 95%;
+  margin: 2% auto;
+  padding: 4%;
+  border-radius: 32px;
+}
+
+.student {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  padding: 1% 2%;
+}
+
+.children {
+  color: red;
+}
