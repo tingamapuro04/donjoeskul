@@ -11,15 +11,14 @@ const Radio = ({ options, name, label, ...rest }) => {
             return options.map((option) => {
               return (
                 <React.Fragment>
-                  <label htmlFor={option.value}> {option.key} </label>
                   <input
-                  type="radio"
-                  name={option.value}
-                  id={option.value}
-                  {...field}
-                  value={option.value}
-                  checked={field.value === option.value}
+                    type="radio"
+                    id={option.value}
+                    {...field}
+                    value={option.value}
+                    checked={field.value === option.value}
                   />
+                  <label htmlFor={option.value}> {option.key} </label>
                 </React.Fragment>
               );
             })

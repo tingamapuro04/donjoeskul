@@ -11,6 +11,12 @@ const initial = {
   subjects: [],
 };
 
+const genderOptions = [
+  {key: 'Male', value: 'Male'},
+  {key: 'Female', value: 'Female'},
+  {key: 'Prefer not to say', value: 'others'}
+]
+
 const validate = (values) => {
   let errors = {};
   return errors;
@@ -44,6 +50,13 @@ const StudentLogin = () => {
                 name="age"
                 type="number"
                 label="Age"
+              />
+
+              <FormikControl
+                control="radio"
+                name="gender"
+                label="Select your gender"
+                options={genderOptions}
               />
 
               <button type="submit">Submit</button>
