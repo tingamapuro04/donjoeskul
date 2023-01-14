@@ -18,7 +18,7 @@ const Checkbox = ({ options, name, label, ...rest }) => {
                     value={option.value}
                     checked={field.value.includes(option.value)}
                   />
-
+                  {" "}
                   {option.key}
                 </label>
               </React.Fragment>
