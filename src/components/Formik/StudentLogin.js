@@ -17,6 +17,15 @@ const genderOptions = [
   {key: 'Prefer not to say', value: 'others'}
 ]
 
+const subjects = [
+  {key: 'Chemistry', value: 'Chemistry'},
+  {key: 'Biology', value: 'Biology'},
+  {key: 'Physics', value: 'Physics'},
+  {key: 'Computer Science', value:'Computer Science'},
+  {key: 'Geography', value: 'Geography'},
+  {key: 'Drawing and Design', value: 'Drawing and Design'}
+]
+
 const validate = (values) => {
   let errors = {};
   return errors;
