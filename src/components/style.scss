@@ -3,3 +3,23 @@ body {
   background: #8886b6a3;
   
 }
+
+.Navlink {
+  width: 100%;
+  margin: 1% auto;
+  background: #fff;
+  border-radius: 10%;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    li {
+      list-style-type: none;
+      padding-right: 0;
+      margin-right: 4%;
+      padding: 1%;
+    }
+  }
+}
